@@ -34,7 +34,10 @@
               "scheme": "calorietracker"
             }
           ],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ]
     },
@@ -44,8 +47,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "d21a5689-d619-422a-b8af-5d97cebd3e91"
+        "projectId": "c64bae9b-0966-4dd5-bcbd-fa6f6a3f1fea"
       }
-    }
+    },
+    "owner": "ruzzidan"
   }
 }
