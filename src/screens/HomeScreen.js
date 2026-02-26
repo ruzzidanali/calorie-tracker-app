@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, TouchableOpacity, RefreshControl } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, RefreshControl, } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "../styles/HomeScreenStyles";
 import { cardStyles, containerStyles } from "../styles/commonStyles";
@@ -137,7 +137,7 @@ const HomeScreen = () => {
       }
     >
       {/* Header */}
-      <GradientHeader title={`Hello, ${profile.name || "User"}!`} subtitle={dateString} icon="fitness" />
+      <GradientHeader title={`Hello, ${profile.name || "User"}!`} subtitle={dateString} icon="logo" />
 
       {/* Calorie Card */}
       <View style={cardStyles.card}>

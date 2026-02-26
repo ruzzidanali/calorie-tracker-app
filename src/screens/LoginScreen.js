@@ -9,11 +9,13 @@ import {
   Platform,
   ScrollView,
   Alert,
+  Image
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { signIn, resendConfirmationEmailSmart } from "../services/authService";
 import { COLORS } from "../constants/theme";
 import { StyleSheet } from "react-native";
+// import icon from ".../assets/icon.png";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -105,7 +107,8 @@ const LoginScreen = ({ navigation }) => {
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.iconContainer}>
-            <Ionicons name="nutrition" size={60} color={COLORS.white} />
+            {/* <Ionicons name="nutrition" size={60} color={COLORS.white} /> */}
+            <Image source={require("../../assets/icon.png")} style={styles.logo} />
           </View>
           <Text style={styles.title}>Calorie Tracker</Text>
           <Text style={styles.subtitle}>
@@ -327,6 +330,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     paddingVertical: 20,
     opacity: 0.8,
+  },
+  logo: {
+    // resizeMode: "contain",
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    justifyContent: "center",
+    alignItems: "center",
+    // marginBottom: 20,
   },
 });
 

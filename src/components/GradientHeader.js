@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { COLORS, SIZES } from "../constants/theme";
 import { Ionicons } from "@expo/vector-icons";
@@ -11,7 +11,15 @@ const GradientHeader = ({ title, subtitle, icon }) => {
         <View style={styles.content}>
           {icon && (
             <View style={styles.iconContainer}>
-              <Ionicons name={icon} size={40} color={COLORS.white} />
+              {icon === "logo" ? (
+                <Image
+                  source={require("../../assets/icon.png")}
+                  style={styles.logo}
+                />
+              ) : (
+                <Ionicons name={icon} size={50} color="white" />
+              )}
+              {/* <Ionicons name={icon} size={40} color={COLORS.white} /> */}
             </View>
           )}
           <View style={styles.textContainer}>
@@ -62,6 +70,16 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
     color: COLORS.white,
     opacity: 0.9,
+  },
+  logo: {
+    // resizeMode: "contain",
+    width: 65,
+    height: 65,
+    borderRadius: 50,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    justifyContent: "center",
+    alignItems: "center",
+    // marginBottom: 20,
   },
 });
 
